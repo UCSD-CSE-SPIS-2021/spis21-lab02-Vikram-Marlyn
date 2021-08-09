@@ -33,18 +33,19 @@ def sumTwo(a,b):
 
    return c
 
-
-
 x = sumTwo(3,5)
 
 print(x)
 
 
-value = str(1232747437)
+def convertWageMtoW(mWage):
 
-valueList = list(map(int,str(value)))
+   wageGap = 0.182
+
+   ratio = 1 - wageGap
+
+   return mWage * ratio
 
 
-print(valueList)
 
 
