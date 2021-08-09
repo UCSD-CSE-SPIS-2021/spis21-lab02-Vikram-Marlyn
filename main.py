@@ -38,13 +38,23 @@ x = sumTwo(3,5)
 print(x)
 
 
-def convertWageMtoW(mWage):
+def convertWageMtoW(mWage,country):
 
-   wageGap = 0.182
-
-   ratio = 1 - wageGap
-
-   return mWage * ratio
+#Calculate the pay for women in Korea based off of gender pay gap stats
+  if country == 'Korea':
+    wageGap = 0.315
+    ratio = 1 - wageGap
+    return mWage * ratio
+  #Calculate the pay for women in Italy based off of gender pay gap stats
+  elif country == 'Italy':
+    wageGap = 0.057
+    ratio = 1 - wageGap
+    return mWage * ratio
+  #Calculate the pay for women everywhere, besides Korea and Italy, based off of gender pay gap stats
+  else:
+    wageGap = 0.182
+    ratio = 1 -0.182
+    return mWage * ratio
 
 
 
